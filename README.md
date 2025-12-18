@@ -30,9 +30,9 @@ Edit the configuration file, default path `~/.local/share/vs1984/cnf/config.xbc`
 
 Add: `"daemon": {"startup": true, "token": "<user_set_DAEMONSVC_TOKEN>"},`
 
-`"startup": true` will enable the daemon to allow dashboard access.
+1. `"startup": true` will enable the daemon to allow dashboard access.
 
-`"token": "<user_set_DAEMONSVC_TOKEN>"` will set the token for dashboard access to the VS1984 main program.
+2. `"token": "<user_set_DAEMONSVC_TOKEN>"` will set the token for dashboard access to the VS1984 main program.
 
 ## Setting DAEMONSVC_TOKEN in VS1984_Dashboard
 
