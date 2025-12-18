@@ -7,7 +7,7 @@ A simple console demo of VS1984 implemented in Python
 
 Visit and [download the DEB file](https://github.com/YangV77/VS1984/releases/latest)
 
-``` base
+```base
 
 # install vs1984
 
@@ -26,19 +26,19 @@ systemctl --user status vs1984d.service
 ```
 
 ## Configure daemon to open
-Edit the configuration file, default path ~/.local/share/vs1984/cnf/config.xbc
+Edit the configuration file, default path `~/.local/share/vs1984/cnf/config.xbc`
 
-Add: "daemon": {"startup": true, "token": "123123"},
+Add: `"daemon": {"startup": true, "token": "<user_set_DAEMONSVC_TOKEN>"},`
 
-"startup": true will enable the daemon to allow dashboard access.
+`"startup": true` will enable the daemon to allow dashboard access.
 
-"token": "<user_set_DAEMONSVC_TOKEN>" will set the token for dashboard access to the VS1984 main program.
+`"token": "<user_set_DAEMONSVC_TOKEN>"` will set the token for dashboard access to the VS1984 main program.
 
 ## Setting DAEMONSVC_TOKEN in VS1984_Dashboard
 
-In xbcpy/config.py:
+In `xbcpy/config.py`:
 
-token = os.getenv("DAEMONSVC_TOKEN") or "<user_set_DAEMONSVC_TOKEN>" This sets DAEMONSVC_TOKEN.
+`token = os.getenv("DAEMONSVC_TOKEN") or "<user_set_DAEMONSVC_TOKEN>" This sets DAEMONSVC_TOKEN.`
 
 ## Installing and Configuring Dependencies
 
@@ -61,6 +61,6 @@ uvicorn dashboard.app:app --host 0.0.0.0 --port 18080
 
 Accessing from another machine:
 
-http://<this machine's IP>:18080/?t=your-strong-browser-access-token
+`http://<this machine's IP>:18080/?t=your-strong-browser-access-token`
 
-## [command manual](https://vs1984.com/en/docs/manual/)
+[command manual](https://vs1984.com/en/docs/manual/)

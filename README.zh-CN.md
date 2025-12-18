@@ -21,15 +21,15 @@ systemctl --user status vs1984d.service
 ```
 
 ## 配置打开daemon
-编辑配置文件, 默认路径 ~/.local/share/vs1984/cnf/config.xbc
+编辑配置文件, 默认路径 `~/.local/share/vs1984/cnf/config.xbc`
 
-添加: "daemon": {"startup": true, "token": "123123"},
-"startup": true 会打开daemon以允许 dashboard 访问
-"token": "<user_set_DAEMONSVC_TOKEN>" 会设置 dashboard 访问VS1984主程序的token
+添加: `"daemon": {"startup": true, "token": "<user_set_DAEMONSVC_TOKEN>"},`
+`"startup": true` 会打开daemon以允许 dashboard 访问
+`"token": "<user_set_DAEMONSVC_TOKEN>"` 会设置 dashboard 访问VS1984主程序的token
 
 ## VS1984_Dashboard 设置 DAEMONSVC_TOKEN
-xbcpy/config.py中:
-    token = os.getenv("DAEMONSVC_TOKEN") or "<user_set_DAEMONSVC_TOKEN>"
+`xbcpy/config.py`中:
+    `token = os.getenv("DAEMONSVC_TOKEN") or "<user_set_DAEMONSVC_TOKEN>"`
 设置 DAEMONSVC_TOKEN
 
 ## 安装和配置依赖
@@ -49,6 +49,6 @@ uvicorn dashboard.app:app --host 0.0.0.0 --port 18080
 ## 浏览器访问
 
 浏览器从其他机器访问：
-http://<这台机器IP>:18080/?t=your-strong-browser-access-token
+`http://<这台机器IP>:18080/?t=your-strong-browser-access-token`
 
-## [命令手册](https://vs1984.com/zh/docs/manual/)
+[命令手册](https://vs1984.com/zh/docs/manual/)
