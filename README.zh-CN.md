@@ -24,8 +24,8 @@ systemctl --user status vs1984d.service
 编辑配置文件, 默认路径 `~/.local/share/vs1984/cnf/config.xbc`
 
 添加: `"daemon": {"startup": true, "token": "<user_set_DAEMONSVC_TOKEN>"},`
-`"startup": true` 会打开daemon以允许 dashboard 访问
-`"token": "<user_set_DAEMONSVC_TOKEN>"` 会设置 dashboard 访问VS1984主程序的token
+1. `"startup": true` 会打开daemon以允许 dashboard 访问
+2. `"token": "<user_set_DAEMONSVC_TOKEN>"` 会设置 dashboard 访问VS1984主程序的token
 
 ## VS1984_Dashboard 设置 DAEMONSVC_TOKEN
 `xbcpy/config.py`中:
