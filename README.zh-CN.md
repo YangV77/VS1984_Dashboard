@@ -50,3 +50,5 @@ uvicorn dashboard.app:app --host 0.0.0.0 --port 18080
 
 浏览器从其他机器访问：
 http://<这台机器IP>:18080/?t=your-strong-browser-access-token
+
+## [命令手册](https://vs1984.com/zh/docs/manual/)
