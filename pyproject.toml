@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xbcpy"
+version = "0.1.0"
+description = "Python SDK for controlling VS1984 via Unix Domain Socket"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "VS1984 Project" }
+]
+
+keywords = [
+    "vs1984",
+    "p2p",
+    "daemon",
+    "unix-socket",
+    "sdk",
+    "security",
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Operating System :: POSIX :: Linux",
+    "Framework :: FastAPI",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Security",
+]
+
+dependencies = [
+    "httpx>=0.26",
+    "aiohttp>=3.9",
+]
+
+[project.optional-dependencies]
+dashboard = [
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.27",
+]
+
+[project.scripts]
+xbcpy = "xbcpy.cli:main"
+
+[tool.setuptools]
+packages = ["xbcpy"]
